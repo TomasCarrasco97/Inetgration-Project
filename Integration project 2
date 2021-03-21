@@ -1,0 +1,131 @@
+# Tomas Carrasco
+# Math Quiz
+
+user = input()
+print("Welcome to my Math Quiz", user)
+
+score = 0
+
+# Question 1
+answer1 = input(
+    "True or False. \n5*5-5=5%5+20? \nTrue \nFalse \nAnswer: ")  # used different numeric operators to test the user, % divides and returns the value of the remainder, - subtraction
+if answer1 == "True" or answer1 == "true":
+    score = score + 1
+    print("Correct", sep=" ")  # used for whitespace
+    print("Score: ", score)
+    print("\n")
+else:
+    print("Incorrect, the answer is True")
+    print("Score: ", score)
+    print("\n")
+
+# Question 2
+answer1 = input(
+    "Which of the following expressions would make this correct? \n20 ? 20.00 \na. == \nb. > \nc. < \nAnswer: ")
+if answer1 == "a" or answer1 == "==":
+    score = score + 1
+    print("Correct", sep=" ")
+    print("score: ", score)
+    print("\n")
+else:
+    print("Incorrect, the answer is a")
+    print("Score: ", score)
+    print("\n")
+
+# Question 3
+answer1 = input(
+    "Which of the following would get you closest to the answer 500? \na. 8 ** 3 \nb. 4500 // 8.45 \nAnswer: ")  # ** 8 to the power of 3 and // divides and returns the integer value of the quotient
+if answer1 == "b":
+    score = score + 1
+    print("Correct", sep=" ")
+    print("Score: ", score)
+    print("\n")
+else:
+    print("Incorrect, the answer is b")
+    print("Score: ", score)
+    print("\n")
+
+# Question 4
+answer1 = input(
+    "What would be the best way to print Hello multiple times?) \na. ('Hello' " " * 10) \nb. ('Hello' + 'Hello' + 'Hello' ....') \nc. None of these \nAnswer: ")  # * multiplication, + addition
+if answer1 == "a" or answer1 == (
+        'Hello' " " * 10):  # In a string operator this would make 'hello' multiply by 10 or above + combine with other strings
+    score = score + 1
+    print("Correct", sep=" ")
+    print("Score: ", score)
+    print("\n")
+else:
+    print("Incorrect, the answer is a")
+    print("Score: ", score)
+    print("\n")
+
+# Question 5
+print("Here is a freebie")
+
+answer1 = input("What is the correct answer -7 / 1 \na. 7 \nb. -7 \nc. -7.0 \nAnswer: ")  # / division
+if answer1 == "c" or "-7.0":
+    score = score + 1
+    print("Correct", sep=" ")
+    print("Score: ", score)
+    print("\n")
+else:
+    print("Incorrect, the answer is c")
+    print("Score: ", score)
+    print("\n")
+
+# Final Score
+if score <= 1:
+    print("Your total score is:", score, "You didn't even try")
+elif score == 3:  # Used elif to make a statement
+    print("Your total score is:", score, "Try harder")
+else:
+    print("Your total score is:", score, "You did amazing")
+    print("\n")
+print("Bonus Round", end=" ")  # used to combine both print statements
+print("Starting Soon")
+bonusPoint = 0
+
+print("How does a for loop start?: ")
+choices = ["A. For", "B. while()", "C. range()", "D. in"]
+
+for selection in range(4):
+    print(choices[selection])
+
+answer = False
+
+def calculateRating(amountBonusPoints):
+    response = ""
+    if(amountBonusPoints > 3):
+        response = "Good job"
+    else:
+        response = "Try Harder."
+    return print(response)
+
+
+while answer == False:
+    userResponse = input("Answer me right: ")
+    if (userResponse == "a" or userResponse == "A"):
+        bonusPoint = bonusPoint +1
+        print("You got the right answer")
+        print("bonusPoint: ", bonusPoint)
+        calculateRating(bonusPoint)
+        answer = True
+    else:
+        print("Try again ")
+        answer = False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Sources Cited: w3schools.com
